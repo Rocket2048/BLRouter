@@ -1,0 +1,7 @@
+use_frameworks!
+
+target 'BLRouter_Example' do
+  pod 'BLRouter', :path => '../'
+
+  
+end

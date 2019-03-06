@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Demo_Router" customModule="BLRouter_Example" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rNd-k7-Nlg">
+                    <rect key="frame" x="40" y="175" width="295" height="75"/>
+                    <color key="backgroundColor" red="0.21940806509999999" green="0.49982905389999999" blue="0.41175687309999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="75" id="dNs-vM-XwT"/>
+                    </constraints>
+                    <state key="normal" title="BLRouter 注册机制">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="btn2Action:" destination="-1" eventType="touchUpInside" id="Ayq-r9-hec"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QfD-FM-vMi">
+                    <rect key="frame" x="40" y="60" width="295" height="75"/>
+                    <color key="backgroundColor" red="0.30313922580000002" green="0.71522042139999997" blue="0.76076316830000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="75" id="qXa-Uv-zUD"/>
+                    </constraints>
+                    <state key="normal" title="JYNavigator 页面跳转">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="btn1Action:" destination="-1" eventType="touchUpInside" id="myI-ng-B7B"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DRY-dc-uc7">
+                    <rect key="frame" x="40" y="290" width="295" height="75"/>
+                    <color key="backgroundColor" red="0.1990887523" green="0.35267561670000003" blue="0.36078873280000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="75" id="pV9-KI-EKB"/>
+                    </constraints>
+                    <state key="normal" title="BLRouter 使用说明">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="btn3Action:" destination="-1" eventType="touchUpInside" id="O0f-Xj-NMi"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="DRY-dc-uc7" secondAttribute="trailing" constant="40" id="1Tx-6S-iqJ"/>
+                <constraint firstItem="rNd-k7-Nlg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="4Jf-4o-5gc"/>
+                <constraint firstItem="QfD-FM-vMi" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="7da-CN-8jo"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rNd-k7-Nlg" secondAttribute="trailing" constant="40" id="Chy-QP-Ahj"/>
+                <constraint firstItem="rNd-k7-Nlg" firstAttribute="top" secondItem="QfD-FM-vMi" secondAttribute="bottom" constant="40" id="CnT-6N-Ioa"/>
+                <constraint firstItem="QfD-FM-vMi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="XtQ-ia-Kqp"/>
+                <constraint firstItem="DRY-dc-uc7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="kRI-wg-uA8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="QfD-FM-vMi" secondAttribute="trailing" constant="40" id="nA6-vD-XNT"/>
+                <constraint firstItem="DRY-dc-uc7" firstAttribute="top" secondItem="rNd-k7-Nlg" secondAttribute="bottom" constant="40" id="s7r-Wj-fxB"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="-338.39999999999998" y="117.39130434782609"/>
+        </view>
+    </objects>
+</document>

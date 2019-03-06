@@ -1,0 +1,16 @@
+PODS:
+  - BLRouter (0.1.0)
+
+DEPENDENCIES:
+  - BLRouter (from `../`)
+
+EXTERNAL SOURCES:
+  BLRouter:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  BLRouter: bf8fde7817f8fc5d208799173957435f16d61b16
+
+PODFILE CHECKSUM: 3cbb43d67af4a476394874783019bebc00cf8e68
+
+COCOAPODS: 1.6.0.beta.2
