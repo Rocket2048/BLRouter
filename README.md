@@ -1,9 +1,6 @@
 # BLRouter
 
-[![CI Status](https://img.shields.io/travis/lin bo/BLRouter.svg?style=flat)](https://travis-ci.org/lin bo/BLRouter)
-[![Version](https://img.shields.io/cocoapods/v/BLRouter.svg?style=flat)](https://cocoapods.org/pods/BLRouter)
-[![License](https://img.shields.io/cocoapods/l/BLRouter.svg?style=flat)](https://cocoapods.org/pods/BLRouter)
-[![Platform](https://img.shields.io/cocoapods/p/BLRouter.svg?style=flat)](https://cocoapods.org/pods/BLRouter)
+实现组件化 - Router组件
 
 ## Example
 
