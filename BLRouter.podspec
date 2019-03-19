@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BLRouter'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = 'BLRouter'
   s.swift_version    = '4.0'
   
@@ -18,9 +18,10 @@ Pod::Spec.new do |s|
 
   s.homepage         = 'https://github.com/iosBob/BLRouter'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'lin bo' => 'ok@linbok.com' }
+  s.author           = { 'iosBob' => 'ok@linbok.com' }
   s.source           = { :git => 'https://github.com/iosBob/BLRouter.git', :tag => s.version.to_s }
   s.ios.deployment_target = '8.0'
   s.source_files = 'BLRouter/Classes/**/*'
   s.frameworks = 'UIKit', 'Foundation'
+  
 end
