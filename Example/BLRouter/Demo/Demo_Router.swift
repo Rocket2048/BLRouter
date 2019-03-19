@@ -20,16 +20,16 @@ class Demo_Router: UIViewController {
 
     @IBAction func btn1Action(_ sender: Any) {
         
-        _ = BLNavigator.push("mgj://DemoVC1", needParent:true)
+        BLNavigator.push("mgj://DemoVC1", needParent:true)
     }
     
     @IBAction func btn2Action(_ sender: Any) {
         
-        _ = BLNavigator.push("mgj://DemoVC2", needParent:true)
+        BLNavigator.push("mgj://DemoVC2", needParent:true)
     }
     
     @IBAction func btn3Action(_ sender: Any) {
         
-        _ = BLNavigator.push("mgj://DemoVC3", needParent:true)
+        BLNavigator.push("mgj://DemoVC3", needParent:true)
     }
 }

@@ -202,7 +202,7 @@ public class MGJRouter: NSObject {
         return parsedResult
     }
     
-    static func allRouters() -> Dictionary<AnyHashable,Any>? {
+    static public func allRouters() -> Dictionary<AnyHashable,Any>? {
         return MGJRouter.shared.routes as? Dictionary<AnyHashable, Any>
     }
 }

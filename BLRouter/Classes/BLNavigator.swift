@@ -9,12 +9,12 @@
 import Foundation
 import UIKit
 
-class BLNavigator {
+public class BLNavigator {
     
     /// 获取最上层导航控制器
     ///
     /// - Returns: 最上层导航控制器
-    static func getCurrentNav() -> UINavigationController? {
+    static public func getCurrentNav() -> UINavigationController? {
         
         var parent: UIViewController?
         if let window = UIApplication.shared.delegate?.window,let rootVC = window?.rootViewController {
@@ -35,7 +35,7 @@ class BLNavigator {
     /// 获取最上层VC
     ///
     /// - Returns: 最上层VC
-    static func getCurrentVC() -> UIViewController? {
+    static public func getCurrentVC() -> UIViewController? {
         
         var parent: UIViewController?
         if let window = UIApplication.shared.delegate?.window,let rootVC = window?.rootViewController {
@@ -51,7 +51,7 @@ class BLNavigator {
     ///
     /// - Parameter url: URL
     /// - Returns: VC
-    static func getVC(_ url: String) -> UIViewController? {
+    static public func getVC(_ url: String) -> UIViewController? {
         
         guard let vc = BLRouter.object(url) as? UIViewController else {
             return nil
@@ -67,7 +67,8 @@ class BLNavigator {
     ///   - needParent: 若没有导航，则使用Parent+nav方式新增
     ///   - animated: 是否显示动画
     /// - Returns: 是否成功
-    static func push(_ url: String, nav: UINavigationController? = nil, needParent:Bool = false, animated:Bool = true) -> Bool {
+    @discardableResult
+    static public func push(_ url: String, nav: UINavigationController? = nil, needParent:Bool = false, animated:Bool = true) -> Bool {
         
         guard let vc = getVC(url) else {
             return false
@@ -83,7 +84,8 @@ class BLNavigator {
     ///   - needParent: 若没有导航，则使用Parent+nav方式新增
     ///   - animated: 是否显示动画
     /// - Returns: 是否成功
-    static func push(_ vc: UIViewController, nav: UINavigationController? = nil, needParent:Bool = false, animated:Bool = true) -> Bool {
+    @discardableResult
+    static public func push(_ vc: UIViewController, nav: UINavigationController? = nil, needParent:Bool = false, animated:Bool = true) -> Bool {
         
         var nav1 = nav
         if nav1 == nil {
@@ -109,7 +111,8 @@ class BLNavigator {
     ///   - needDismiss: 已经在最底层，是否Dismiss Parent
     ///   - animated: 是否显示动画
     /// - Returns: 是否成功
-    static func pop(_ nav: UINavigationController? = nil, needDismiss:Bool = false,  animated:Bool = true) -> Bool {
+    @discardableResult
+    static public func pop(_ nav: UINavigationController? = nil, needDismiss:Bool = false,  animated:Bool = true) -> Bool {
         
         var nav1 = nav
         if nav1 == nil {
@@ -136,7 +139,8 @@ class BLNavigator {
     ///   - nav: 指定Nav 若为nil 则取最上层
     ///   - animated: 是否显示动画
     /// - Returns: 是否成功执行
-    static func popToRoot(_ nav: UINavigationController? = nil, animated:Bool = true) -> Bool {
+    @discardableResult
+    static public func popToRoot(_ nav: UINavigationController? = nil, animated:Bool = true) -> Bool {
         
         var nav1 = nav
         if nav1 == nil {
@@ -157,7 +161,8 @@ class BLNavigator {
     ///   - animated: 是否显示动画
     ///   - completion: 成功回调
     /// - Returns: 是否成功执行
-    static func parent(_ url: String, fromVC: UIViewController? = nil, showNav:Bool = false , animated:Bool = true, completion:(() -> Void)? = nil) -> Bool {
+    @discardableResult
+    static public func parent(_ url: String, fromVC: UIViewController? = nil, showNav:Bool = false , animated:Bool = true, completion:(() -> Void)? = nil) -> Bool {
         
         let vc = BLNavigator.getVC(url)
         guard let vc1 = vc else { return false }
@@ -174,7 +179,8 @@ class BLNavigator {
     ///   - animated: 是否显示动画
     ///   - completion: 成功回调
     /// - Returns: 是否成功执行
-    static func parent(_ toVC: UIViewController, fromVC: UIViewController? = nil, showNav:Bool = false , animated:Bool = true, completion:(() -> Void)? = nil) -> Bool {
+    @discardableResult
+    static public func parent(_ toVC: UIViewController, fromVC: UIViewController? = nil, showNav:Bool = false , animated:Bool = true, completion:(() -> Void)? = nil) -> Bool {
         
         var vc1 = fromVC
         if vc1 == nil {
@@ -202,7 +208,8 @@ class BLNavigator {
     ///   - animated: 是否显示动画
     ///   - completion: 成功回调
     /// - Returns: 是否成功执行
-    static func dismiss(_ vc: UIViewController? = nil, animated:Bool = true, completion:(() -> Void)? = nil) -> Bool {
+    @discardableResult
+    static public func dismiss(_ vc: UIViewController? = nil, animated:Bool = true, completion:(() -> Void)? = nil) -> Bool {
         
         var vc1 = vc
         if vc1 == nil {

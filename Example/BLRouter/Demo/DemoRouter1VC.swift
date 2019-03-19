@@ -48,28 +48,28 @@ extension DemoRouter1VC: UITableViewDelegate, UITableViewDataSource {
 
         switch funArr[indexPath.row] {
         case "push":
-            _ = BLNavigator.push("mgj://DemoVC1")
+            BLNavigator.push("mgj://DemoVC1")
             break
         case "push + needParent":
-            _ = BLNavigator.push("mgj://DemoVC1", needParent: true)
+            BLNavigator.push("mgj://DemoVC1", needParent: true)
             break
         case "pop":
-            _ = BLNavigator.pop()
+            BLNavigator.pop()
             break
         case "pop + needDismiss":
-            _ = BLNavigator.pop(needDismiss: true)
+            BLNavigator.pop(needDismiss: true)
             break
         case "pop to root":
-            _ = BLNavigator.popToRoot()
+            BLNavigator.popToRoot()
             break
         case "parent":
-            _ = BLNavigator.parent("mgj://DemoVC1")
+            BLNavigator.parent("mgj://DemoVC1")
             break
         case "parent + nav":
-            _ = BLNavigator.parent("mgj://DemoVC1", showNav: true)
+            BLNavigator.parent("mgj://DemoVC1", showNav: true)
             break
         case "dismiss":
-            _ = BLNavigator.dismiss()
+            BLNavigator.dismiss()
             break
         default:
             break

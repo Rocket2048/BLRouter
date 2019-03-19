@@ -8,11 +8,11 @@
 
 import Foundation
 
-typealias BLRouterHander = ([String: Any]?, JYComletionHander?) -> ()
-typealias BLRouterObjectHander = ([String: Any]?, JYComletionHander?) -> (Any)
-typealias JYComletionHander = (Any?) -> ()
+public typealias BLRouterHander = ([String: Any]?, JYComletionHander?) -> ()
+public typealias BLRouterObjectHander = ([String: Any]?, JYComletionHander?) -> (Any)
+public typealias  JYComletionHander = (Any?) -> ()
 
-class BLRouter {
+public class BLRouter {
 
     /// 注册 URLPattern 对应的 Handler，在 handler 中可以初始化 VC，然后对 VC 做各种操作
     ///
@@ -20,7 +20,7 @@ class BLRouter {
     ///   - urlPattern: 带上 scheme，如 mgj://beauty/:id
     ///   - toHandler: 该 block 会传一个字典，包含了注册的 URL 中对应的变量。
     ///     假如注册的 URL 为 mgj://beauty/:id 那么，就会传一个 @{@"id": 4} 这样的字典过来
-    static func register(_ url: String, toHandler: @escaping BLRouterHander) {
+    static public func register(_ url: String, toHandler: @escaping BLRouterHander) {
         
         MGJRouter.registerWithHandler(url, { dic in
 
@@ -36,7 +36,7 @@ class BLRouter {
     ///   - toObjectHandler:  该 block 会传一个字典，包含了注册的 URL 中对应的变量。
     ///     假如注册的 URL 为 mgj://beauty/:id 那么，就会传一个 @{@"id": 4} 这样的字典过来
     ///     自带的 key 为 @"url" 和 @"completion" (如果有的话)
-    static func register(_ url: String, toObjectHandler: @escaping BLRouterObjectHander) {
+    static public func register(_ url: String, toObjectHandler: @escaping BLRouterObjectHander) {
         
         MGJRouter.registerWithObjectHandler(url, toObjectHandler: {dic in
             
@@ -48,7 +48,7 @@ class BLRouter {
     /// 取消注册某个 URL Pattern
     ///
     /// - Parameter url: URLPattern
-    static func deregister(_ url: String) {
+    static public func deregister(_ url: String) {
         
         MGJRouter.deregister(url)
     }
@@ -60,7 +60,7 @@ class BLRouter {
     ///   - userInfo: 附加参数
     ///   - deregisterAfterUsed: 是否调用后销毁
     ///   - completion: URL 处理完成后的 callback，完成的判定跟具体的业务相关
-    static func open(_ url: String, userInfo: Dictionary<String, Any>? = nil, deregisterAfterUsed: Bool = false, completion: JYComletionHander? = nil) {
+    static public func open(_ url: String, userInfo: Dictionary<String, Any>? = nil, deregisterAfterUsed: Bool = false, completion: JYComletionHander? = nil) {
 
         MGJRouter.open(url, userInfo, completion)
         // print("OpenURL:\(url),info:\(userInfo?.description ?? "NULL"),hander:\(completion.debugDescription)")
@@ -76,7 +76,7 @@ class BLRouter {
     ///   - userInfo: 附加参数
     ///   - deregisterAfterUsed: 是否调用后销毁
     /// - Returns: 返回一个 object
-    static func object(_ url: String, userInfo: Dictionary<String, Any>? = nil,  deregisterAfterUsed: Bool = false) -> Any? {
+    static public func object(_ url: String, userInfo: Dictionary<String, Any>? = nil,  deregisterAfterUsed: Bool = false) -> Any? {
         
         let obj = MGJRouter.object(url, userInfo)
         // print("objectURL:\(url),info:\(userInfo?.description ?? "NULL")")
@@ -93,7 +93,7 @@ class BLRouter {
     ///   - url: 带 Scheme，如 mgj://beauty/3
     ///   - matchExactly: matchExactly
     /// - Returns: 返回BOOL值
-    static func canOpen(_ url: String, matchExactly: Bool = false) -> Bool {
+    static public func canOpen(_ url: String, matchExactly: Bool = false) -> Bool {
         
         return MGJRouter.canOpen(url:url, matchExactly)
     }
@@ -107,7 +107,7 @@ class BLRouter {
     ///   - pattern: url pattern 比如 @"beauty/:id"
     ///   - parameters: 一个数组，数量要跟 pattern 里的变量一致
     /// - Returns: 返回生成的URL String
-    static func generate(_ url: String, parameters: Array<String>) -> String? {
+    static public func generate(_ url: String, parameters: Array<String>) -> String? {
         
         return MGJRouter.generateURL(url, parameters)
     }
@@ -115,7 +115,7 @@ class BLRouter {
     /// 获取注册列表
     ///
     /// - Returns: 注册列表
-    static func allRouters() -> Dictionary<AnyHashable,Any>? {
+    static public func allRouters() -> Dictionary<AnyHashable,Any>? {
         
         return MGJRouter.allRouters()
     }
