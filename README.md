@@ -1,3 +1,9 @@
+
+[![CI Status](https://img.shields.io/travis/ok@linbok.com/BLRouter.svg?style=flat)](https://travis-ci.org/ok@linbok.com/BLRouter)
+[![Version](https://img.shields.io/cocoapods/v/BLUtil.svg?style=flat)](https://cocoapods.org/pods/BLRouter)
+[![License](https://img.shields.io/cocoapods/l/BLUtil.svg?style=flat)](https://cocoapods.org/pods/BLRouter)
+[![Platform](https://img.shields.io/cocoapods/p/BLUtil.svg?style=flat)](https://cocoapods.org/pods/BLRouter)
+
 # BLRouter 效果图
 
 <img src="https://github.com/iosBob/BLDoc/blob/master/BLRouter/bl001.png" width="375"/>
