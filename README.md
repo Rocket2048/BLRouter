@@ -6,10 +6,10 @@
 
 # BLRouter 效果图
 
-<img src="https://github.com/iosBob/BLDoc/blob/master/BLRouter/bl001.png" width="375"/>
-<img src="https://github.com/iosBob/BLDoc/blob/master/BLRouter/bl002.png" width="375"/>
-<img src="https://github.com/iosBob/BLDoc/blob/master/BLRouter/bl003.png" width="375"/>
-<img src="https://github.com/iosBob/BLDoc/blob/master/BLRouter/bl004.png" width="375"/>
+<img src="https://github.com/iosBob/BLDoc/blob/master/BLRouter/bl001.png" width="300"/>
+<img src="https://github.com/iosBob/BLDoc/blob/master/BLRouter/bl002.png" width="300"/>
+<img src="https://github.com/iosBob/BLDoc/blob/master/BLRouter/bl003.png" width="300"/>
+<img src="https://github.com/iosBob/BLDoc/blob/master/BLRouter/bl004.png" width="300"/>
 
 ## BLRouter 接口方法
 
